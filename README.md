@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🚀 Flutter BaseApp
 
@@ -94,6 +92,3 @@ MIT – libre d’usage et d’adaptation.
 
 > Développé avec ❤️ par [@sylvere36](https://github.com/sylvere36)
 ```
-
----
-
