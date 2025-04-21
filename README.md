@@ -5,8 +5,6 @@
 
 Le projet est conçu pour servir de base solide aux applications mobiles et multiplateformes en Flutter, avec un focus sur la maintenabilité, la lisibilité et les bonnes pratiques.
 
----
-
 ## 🧱 Architecture DDD
 
 Le projet suit l’architecture **Clean + DDD**, avec une séparation claire en 4 couches :
