@@ -7,10 +7,8 @@ part 'auth_response_dto.g.dart';
 
 @freezed
 abstract class AuthResponseDto with _$AuthResponseDto {
-  factory AuthResponseDto({
-    @JsonKey(name: 'user') required UserDto? user,
-    @JsonKey(name: 'token') required String? token,
-  }) = _AuthResponseDto;
+  factory AuthResponseDto({required UserDto? user, required String? token}) =
+      _AuthResponseDto;
 
   factory AuthResponseDto.fromDomain(AuthResponse authResponse) {
     return AuthResponseDto(
