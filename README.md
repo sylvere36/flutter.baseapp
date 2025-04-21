@@ -1,16 +1,99 @@
-# baseapp
+---
 
-A new Flutter project.
+```markdown
+# 🚀 Flutter BaseApp
 
-## Getting Started
+**BaseApp** est un projet Flutter modulaire, structuré selon les principes du **Domain-Driven Design (DDD)**, intégrant **FVM**, **flutter_gen**, ainsi qu’une organisation rigoureuse du code basée sur `lib/src`.
 
-This project is a starting point for a Flutter application.
+Le projet est conçu pour servir de base solide aux applications mobiles et multiplateformes en Flutter, avec un focus sur la maintenabilité, la lisibilité et les bonnes pratiques.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🧱 Architecture DDD
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Le projet suit l’architecture **Clean + DDD**, avec une séparation claire en 4 couches :
+
+```
+lib/
+└── src/
+    ├── application/      # Cas d’usage (UseCases, state management)
+    ├── domain/           # Entités, Value Objects, interfaces
+    ├── infrastructure/   # Implémentations concrètes, accès aux APIs, DB
+    └── presentation/     # UI, pages
+```
+
+Chaque couche a un rôle précis, ce qui permet une forte découplage, un test unitaire facilité et une évolutivité assurée.
+
+---
+
+## 🧪 Tests
+
+- **Tests unitaires** sur les cas d’usage et entités du domaine.
+- **Tests d’intégration** pour valider le comportement global.
+
+```bash
+flutter test
+```
+
+---
+
+## ⚙️ Fonctionnalités techniques
+
+- ✔️ **FVM** pour gérer les versions Flutter de manière isolée
+- 🎯 **flutter_gen** pour la génération automatique des assets et fonts
+- 🔁 **freezed** + **json_serializable** pour les modèles immuables et le parsing JSON
+- 🔗 **get_it** pour l’injection de dépendances
+- 🌐 **dio** pour la communication réseau
+- 📦 Architecture prête à l’emploi pour Firebase, REST, ou GraphQL
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Cloner le projet**
+```bash
+git clone https://github.com/sylvere36/flutter.baseapp.git
+cd flutter.baseapp
+```
+
+2. **Installer Flutter via FVM**
+```bash
+fvm install
+fvm use
+fvm flutter pub get
+```
+
+3. **Générer les fichiers**
+```bash
+fvm flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+4. **Lancer le projet**
+```bash
+fvm flutter run
+```
+
+---
+
+## 📁 Organisation du code
+
+| Dossier             | Rôle |
+|---------------------|------|
+| `application/`      | Cas d’usage, orchestrateurs |
+| `domain/`           | Entités, Value Objects, Interfaces |
+| `infrastructure/`   | Implémentations concrètes (API, local, remote) |
+| `presentation/`     | UI, pages, gestion d’état |
+
+---
+
+## 📄 Licence
+
+MIT – libre d’usage et d’adaptation.
+
+---
+
+> Développé avec ❤️ par [@sylvere36](https://github.com/sylvere36)
+```
+
+---
+
